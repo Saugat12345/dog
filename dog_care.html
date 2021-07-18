@@ -19,24 +19,32 @@
                 <h1 class="fo1" href=""><i class="fas fa-paw"></i> Dogs Care </h1>
 
             </div>
+            <!-- <div class="hamburger">
+                <a href="#"><i class="fas fa-bars "></i></a>
+
+            </div> -->
+
+
             <ul class="nav-links">
+                
 
                 <li> <a href=""> Home </a></li>
                 <li> <a href=""> About</a></li>
                 <li> <a href=""> Service</a></li>
-                <div class="dropdown">
-                    <li  class="dropbtn"> <a>Pages  <i class="fa fa-caret-down"></i> </a></li>
+                <li  class="dropbtn"> <a>Pages  <i class="fa fa-caret-down"></i> </a>
                      
-                    <div class="dropdown-content none" id="myDropdown">
-                      <a href="#">BLOG POSTS</a>
-                      <a href="#">404 PAGE</a>
-                      <a href="#">LANDING PAGE</a>
-                    </div>
-                  </div> 
+                   <ul class="dropdown-content">
+                       <li> ><a href="#">BLOG POSTS</a></li>
+                           <li>   <a href="#">404 PAGE</a></li>
+                        <li>   <a href="#">LANDING PAGE</a></li>
+                   </ul>
+                    
+                </li>
 
                 <li> <a href=""> Contact</a></li>
                 <li class="lastli"> <input type="search" id="search" placeholder="Enter Keyword" href=""><span><i class="fas fa-search"></i> </span></li>
                 <li><i class="far fa-moon white"></i></li>
+                <li> <a class="hamburger" href="#"><i class="fas fa-bars "></i></a> </li>
 
 
 
@@ -207,7 +215,7 @@
     <section id="five">
         <div class="dog-image"><img src="pics/dog.png" alt=""></div>
         <div class="dog-container">
-            <div class="dog-boxes">
+            <div class="boxes">
                 <div class="dog-box">
                     <span> <i class="fas fa-thumbs-up"></i></span>
                     <h4>Dog Sitting</h4>
@@ -219,7 +227,7 @@
                     <p>Lorem ante ipsum primis in faucibus orci luctus eted ultrices posuere.</p>
                 </div>
             </div>
-            <div class="dog-boxes">
+            <div class="boxes">
                 <div class="dog-box">
                     <span> <i class="fas fa-bullhorn"></i></span>
                     <h4>Dog Dentistry</h4>
@@ -293,7 +301,7 @@
     </section>
 
 
-    <section id="eight1">
+    <section id="eight">
         <div class="footer-container">
             <div class="dog-care ">
                 <span href="#"><i class="fas fa-paw "></i>
@@ -330,16 +338,20 @@
                 </p>
             </div>
 
-            <div class="copyright">
-
-                <p>&#169; 2021 Dogs Care. All Rights Reserved | WordPress Theme by
-                    <strong>W3Layouts.</strong> </p>
-    
-            </div>
     
         </div>
     
+        <div class="copyright">
 
+            <p>&#169; 2021 Dogs Care. All Rights Reserved | WordPress Theme by
+                <strong>Saugat.</strong> </p>
+
+        </div>
+
+    </section>
+
+    <section id="nine">
+        <a href="#one"><i class="fas fa-arrow-circle-up"></i></a>
     </section>
 
 
@@ -349,21 +361,37 @@
 
 
     <script>
-        let y = document.querySelector(".dropbtn");
-        let z =document.querySelector("#myDropdown")
-        console.log(y);
-        console.log(z);
-        y.addEventListener("click" , ()=>{
-            // y.classList.toggle(".none")
-            z.classList.toggle(".none")
+    
+        // let y = document.querySelector(".dropbtn");
+        // let z =document.querySelector("#myDropdown")
+        // console.log(y);
+        // console.log(z);
+        // y.addEventListener("click" , ()=>{
+        //     // y.classList.toggle(".none")
+        //     z.classList.toggle(".none")
             
             
-        })
+    
 //         $(function myFunction() {
 //   document.getElementById("#myDropdown").classList.toggle("show");
 // })
 
     </script>
-    
+<script>
+    $(window).scroll(function(){
+        let x = $(window).scrollTop();
+        if(x>30){
+            $(".nav-bar").css({"background": "white"})
+            $("ul li a").css({"color":"black"})
+        }
+        else{
+            $(".nav-bar").css({"background": "transparent"})
+            $("ul li a").css({"color":"white"})
+        }
+    })
+</script>    
+
+
+
 </body>
 </html>
